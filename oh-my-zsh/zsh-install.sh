@@ -11,3 +11,4 @@ wget https://github.com/ALSe61/scripts/raw/master/oh-my-zsh/.zshrc -O ~/.zshrc
 wget https://github.com/ALSe61/scripts/raw/master/oh-my-zsh/.p10k.zsh -O ~/.p10k.zsh
 else
 echo "OhMyZSH alredy install..."
+fi
