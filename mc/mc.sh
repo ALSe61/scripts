@@ -12,3 +12,5 @@ fi
 cp -f /tmp/scripts/mc/skins/* ~/.local/share/mc/skins/
 rm -fr /tmp/scripts
 exit 0
+
+# sh -c "$(wget https://raw.githubusercontent.com/ALSe61/scripts/master/mc/mc.sh -O -)"
