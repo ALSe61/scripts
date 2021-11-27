@@ -1,6 +1,13 @@
 #!/bin/ash
+
+[ -x "$(command -v apt)" ] && PM="apt"
+[ -x "$(command -v opkg)" ] && PM="opkg"
+[ -x "$(command -v pkg)" ] && PM="pkg"
 echo "OhMyZSH install..."
 sleep 5
+[ ! -x "$(command -v zsh)" ] && $PM install zsh -y
+[ ! -x "$(command -v git)" ] && $PM install git -y
+[ ! -x "$(command -v wget)" ] && $PM install wget -y
 if [ ! -d ~/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
 else
