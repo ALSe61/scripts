@@ -8,11 +8,7 @@ sleep 5
 [ ! -x "$(command -v zsh)" ] && $PM install zsh -y
 [ ! -x "$(command -v git)" ] && $PM install git -y
 [ ! -x "$(command -v wget)" ] && $PM install wget -y
-if [ ! -d ~/.oh-my-zsh ]; then
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
-else
-  echo "OhMyZSH alredy install..."
-fi
+[ ! -d ~/.oh-my-zsh ] && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || echo "OhMyZSH alredy install..."
 echo "Copy plugins & settings..."
 sleep 5
 # powerlevel10k
