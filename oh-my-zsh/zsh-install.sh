@@ -4,12 +4,12 @@
 [ -x "$(command -v opkg)" ] && PM="opkg"
 [ -x "$(command -v pkg)" ] && PM="pkg"
 echo "OhMyZSH install..."
-sleep 5
+sleep 2
 [ ! -x "$(command -v zsh)" ] && $PM update && $PM install zsh -y
 [ ! -x "$(command -v git)" ] && $PM update && $PM install git -y
 [ ! -x "$(command -v wget)" ] && $PM update && $PM install wget -y
 echo "Copy plugins & settings..."
-sleep 5
+sleep 2
 # Oh-my-zsh
 [ ! -d ~/.oh-my-zsh ] && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 wget https://raw.githubusercontent.com/ALSe61/scripts/master/oh-my-zsh/.zshrc -O ~/.zshrc
@@ -24,4 +24,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ] && \
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
 echo "Complete!"
-sleep 5 && exit 0
+sleep 1 && exit 0
