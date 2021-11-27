@@ -13,7 +13,7 @@ sleep 2
 # Oh-my-zsh
 [ ! -d ~/.oh-my-zsh ] && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 wget https://raw.githubusercontent.com/ALSe61/scripts/master/oh-my-zsh/.zshrc -O ~/.zshrc
-[ "$PM" = "pkg" ] && sed -i 's/ export ZSH=.*/ export ZSH="\/data\/data\/com.termux\/files\/home\/.oh-my-zsh" /' ~/.zshrc
+[ "$PM" = "pkg" ] && sed -i 's/export ZSH=.*/export ZSH="\/data\/data\/com.termux\/files\/home\/.oh-my-zsh"/' ~/.zshrc
 # powerlevel10k
 [ ! -d ~/.oh-my-zsh/custom/themes/powerlevel10k ] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k 
 wget https://raw.githubusercontent.com/ALSe61/scripts/master/oh-my-zsh/.p10k.zsh -O ~/.p10k.zsh
@@ -24,4 +24,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ] && \
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
 echo "Complete!"
+bash
+zsh
 sleep 1 && exit 0
