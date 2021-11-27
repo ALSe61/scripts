@@ -23,7 +23,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # zsh-autosuggestions
 [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ] && \
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
+chsh -s zsh
 echo "Complete!"
-bash
-zsh
-sleep 1 && exit 0
+exit 0
