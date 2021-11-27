@@ -5,9 +5,9 @@
 [ -x "$(command -v pkg)" ] && PM="pkg"
 echo "OhMyZSH install..."
 sleep 5
-[ ! -x "$(command -v zsh)" ] && $PM install zsh -y
-[ ! -x "$(command -v git)" ] && $PM install git -y
-[ ! -x "$(command -v wget)" ] && $PM install wget -y
+[ ! -x "$(command -v zsh)" ] && $PM update && $PM install zsh -y
+[ ! -x "$(command -v git)" ] && $PM update && $PM install git -y
+[ ! -x "$(command -v wget)" ] && $PM update && $PM install wget -y
 [ ! -d ~/.oh-my-zsh ] && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || echo "OhMyZSH alredy install..."
 echo "Copy plugins & settings..."
 sleep 5
