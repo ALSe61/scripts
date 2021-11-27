@@ -11,12 +11,12 @@ sleep 5
 echo "Copy plugins & settings..."
 sleep 5
 # Oh-my-zsh
-[ ! -d ~/.oh-my-zsh ] && \
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
+[ ! -d ~/.oh-my-zsh ] && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 wget https://raw.githubusercontent.com/ALSe61/scripts/master/oh-my-zsh/.zshrc -O ~/.zshrc
+[ "$PM" = "pkg" ] && sed -i 's/ZSH=.*/export ZSH="/data/data/com.termux/files/home/.oh-my-zsh"/' ~/.zshrc
+
 # powerlevel10k
-[ ! -d ~/.oh-my-zsh/custom/themes/powerlevel10k ] && \
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k && \
+[ ! -d ~/.oh-my-zsh/custom/themes/powerlevel10k ] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k 
 wget https://raw.githubusercontent.com/ALSe61/scripts/master/oh-my-zsh/.p10k.zsh -O ~/.p10k.zsh
 # zsh-syntax-highlighting
 [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] && \
