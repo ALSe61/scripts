@@ -24,6 +24,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # zsh-autosuggestions
 [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ] && \
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
-
-#sed -i 's/ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
-#sed -i 's/plugins=.*/plugins=(git\ zsh-syntax-highlighting\ sudo\ docker\ docker-compose\ systemadmin\ systemd\ zsh-autosuggestions)/' ~/.zshrc
+echo "Complete!"
+sleep 5 && exit 0
