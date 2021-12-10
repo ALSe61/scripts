@@ -1,5 +1,5 @@
-#!/bin/ash
-# sh -c "$(wget https://raw.githubusercontent.com/ALSe61/scripts/1/oh-my-zsh/zsh.sh -O -)"
+#!/bin/sh
+# sh -c "$(wget https://raw.githubusercontent.com/ALSe61/scripts/master/oh-my-zsh/zsh.sh -O -)"
 [ -x "$(command -v apt)" ] && PM="apt"
 [ -x "$(command -v opkg)" ] && PM="opkg"
 [ -x "$(command -v pkg)" ] && PM="pkg"
@@ -18,12 +18,12 @@ wget https://raw.githubusercontent.com/ALSe61/scripts/master/oh-my-zsh/.zshrc -O
 [ ! -d ~/.oh-my-zsh/custom/themes/powerlevel10k ] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k 
 wget https://raw.githubusercontent.com/ALSe61/scripts/master/oh-my-zsh/.p10k.zsh -O ~/.p10k.zsh
 # zsh-syntax-highlighting
-[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] && \
+[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # zsh-autosuggestions
-[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ] && \
+[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
-chsh -s zsh
+#chsh -s zsh
 echo "Complete!"
 sleep 10
 exit 0
