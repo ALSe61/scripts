@@ -1,5 +1,5 @@
 #!/bin/ash
-
+# sh -c "$(wget https://raw.githubusercontent.com/ALSe61/scripts/1/oh-my-zsh/zsh.sh -O -)"
 [ -x "$(command -v apt)" ] && PM="apt"
 [ -x "$(command -v opkg)" ] && PM="opkg"
 [ -x "$(command -v pkg)" ] && PM="pkg"
@@ -22,6 +22,8 @@ wget https://raw.githubusercontent.com/ALSe61/scripts/master/oh-my-zsh/.p10k.zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # zsh-autosuggestions
 [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ] && \
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
 chsh -s zsh
-echo "Complete!" && exit 0
+echo "Complete!"
+sleep 10
+exit 0
