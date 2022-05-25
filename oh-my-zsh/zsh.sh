@@ -8,7 +8,8 @@ ZSH_CUSTOM="$ZSH/custom"
 [ -x "$(command -v pkg)" ] && pkg -qy install zsh 2>&1
 echo "Copy plugins & settings..."
 # Oh-my-zsh
-[ ! -d "$ZSH" ] && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+[ ! -d "$ZSH" ] && \
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 wget https://raw.githubusercontent.com/ALSe61/scripts/master/oh-my-zsh/.zshrc -O ~/.zshrc 2>&1
 # sed -i 's/export ZSH=.*/export ZSH="\/data\/data\/com.termux\/files\/home\/.oh-my-zsh"/' ~/.zshrc
 # powerlevel10k
