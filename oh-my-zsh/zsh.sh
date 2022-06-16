@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 echo "OhMyZSH install..."
 ZSH="$HOME/.oh-my-zsh"
 ZSH_CUSTOM="$ZSH/custom"
-# bash -c "$(wget https://raw.githubusercontent.com/ALSe61/scripts/master/oh-my-zsh/zsh.sh -O -)"
+# sh -c "$(wget https://raw.githubusercontent.com/ALSe61/scripts/master/oh-my-zsh/zsh.sh -O -)"
 [ -x "$(command -v apt)" ] && apt -qy install zsh 2>&1
 [ -x "$(command -v opkg)" ] && opkg -qy install zsh 2>&1
 [ -x "$(command -v pkg)" ] && pkg -qy install zsh 2>&1
